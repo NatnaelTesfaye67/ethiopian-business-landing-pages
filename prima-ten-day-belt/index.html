@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRIMA | Ten Day Belt General Trading PLC | Ethiopia</title>
+<meta name="description" content="PRIMA food products by Ten Day Belt General Trading PLC — flour, pasta, macaroni and biscuits produced in Ethiopia and distributed across the country.">
+<meta property="og:title" content="PRIMA | Ten Day Belt General Trading PLC">
+<meta property="og:description" content="From Ethiopian food manufacturing to tables across the country. Flour, pasta, macaroni and biscuits produced in Ethiopia.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Ethiopic:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<style>
+:root{
+  --charcoal:#1A1A1A;--charcoal-2:#252525;--charcoal-3:#333;
+  --cream:#F5F0E8;--cream-2:#EDE7DB;--cream-3:#E2DACE;
+  --wheat:#D4C5A0;--wheat-2:#C4B48A;--wheat-3:#B8A878;
+  --gold:#B89A4A;--gold-2:#A8893A;--gold-3:#98792A;
+  --green:#2D4A35;--green-2:#3A5C44;--green-3:#1E3325;
+  --terracotta:#B5654A;--terracotta-2:#A05540;
+  --stone:#9B9588;--warm-grey:#6B6660;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter','Noto Sans Ethiopic',sans-serif;background:var(--charcoal);color:var(--cream);overflow-x:hidden;line-height:1.7;}
+body[data-lang="am"]{font-family:'Noto Sans Ethiopic','Inter',sans-serif;}
+body[data-lang="am"] .serif{font-family:'Noto Sans Ethiopic',serif;}
+body[data-lang="am"] .eyebrow{font-family:'Noto Sans Ethiopic',sans-serif;letter-spacing:1px;}
+body[data-lang="am"] .nav-links a{font-family:'Noto Sans Ethiopic',sans-serif;letter-spacing:0.5px;}
+body[data-lang="am"] .grotesk{font-family:'Noto Sans Ethiopic',sans-serif;}
+.hidden{display:none!important;}
+.serif{font-family:'Cormorant Garamond',serif;}
+.grotesk{font-family:'Space Grotesk',sans-serif;}
+.eyebrow{font-family:'Space Grotesk',sans-serif;font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;font-weight:500;color:var(--gold);}
+
+/* === GRAIN TEXTURE === */
+.grain-overlay{position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:0.04;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+
+/* === CUSTOM CURSOR === */
+.cursor-dot{position:fixed;width:8px;height:8px;border-radius:50%;background:var(--gold);pointer-events:none;z-index:10001;transform:translate(-50%,-50%);transition:width 0.3s,height 0.3s,background 0.3s,opacity 0.3s;opacity:0;}
+.cursor-ring{position:fixed;width:40px;height:40px;border:1px solid var(--gold);border-radius:50%;pointer-events:none;z-index:10000;transform:translate(-50%,-50%);transition:width 0.35s,height 0.35s,border-color 0.35s,opacity 0.3s;opacity:0;}
+.cursor-dot.visible{opacity:1;}
+.cursor-ring.visible{opacity:0.5;}
+.cursor-ring.expand{width:80px;height:80px;border-color:var(--wheat);}
+.cursor-ring.view{width:60px;height:60px;border-color:var(--cream);}
+@media(max-width:900px){.cursor-dot,.cursor-ring{display:none;}}
+
+/* === NAV === */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:24px 0;transition:all 0.4s ease;background:transparent;}
+.nav.scrolled{background:rgba(26,26,26,0.92);backdrop-filter:blur(20px);padding:14px 0;border-bottom:1px solid rgba(184,154,74,0.12);}
+.nav-inner{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 40px;}
+.nav-logo{display:flex;flex-direction:column;text-decoration:none;gap:2px;}
+.nav-logo .brand{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:var(--cream);letter-spacing:2px;line-height:1;}
+.nav-logo .sub{font-family:'Space Grotesk',sans-serif;font-size:0.5rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:500;}
+.nav-links{display:flex;gap:32px;align-items:center;}
+.nav-links a{color:rgba(245,240,232,0.65);text-decoration:none;font-size:0.78rem;font-weight:400;letter-spacing:1px;text-transform:uppercase;transition:color 0.3s;position:relative;font-family:'Space Grotesk',sans-serif;}
+.nav-links a:hover{color:var(--cream);}
+.nav-links a::after{content:'';position:absolute;bottom:-6px;left:0;width:0;height:1px;background:var(--gold);transition:width 0.35s;}
+.nav-links a:hover::after{width:100%;}
+.lang-btn{background:transparent;border:1px solid rgba(184,154,74,0.4);color:var(--gold);padding:7px 16px;border-radius:0;cursor:pointer;font-size:0.7rem;font-weight:500;letter-spacing:1px;transition:all 0.3s;font-family:'Space Grotesk',sans-serif;}
+.lang-btn:hover{background:var(--gold);color:var(--charcoal);border-color:var(--gold);}
+.nav-burger{display:none;flex-direction:column;gap:6px;cursor:pointer;background:none;border:none;padding:4px;}
+.nav-burger span{width:28px;height:1.5px;background:var(--cream);transition:all 0.3s;}
+@media(max-width:900px){
+  .nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--charcoal);flex-direction:column;justify-content:center;align-items:center;gap:28px;z-index:1001;transform:translateY(-100%);transition:transform 0.5s cubic-bezier(0.7,0,0.3,1);}
+  .nav-links.open{transform:translateY(0);}
+  .nav-links.open a{font-size:1.5rem;font-family:'Cormorant Garamond',serif;font-weight:500;text-transform:none;letter-spacing:0.5px;}
+  .nav-burger{display:flex;z-index:1002;}
+  .nav-burger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+  .nav-burger.open span:nth-child(2){opacity:0;}
+  .nav-burger.open span:nth-child(3){transform:rotate(-45deg) translate(7px,-7px);}
+}
+
+/* === HERO === */
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden;background:var(--charcoal);}
+.hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden;}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:0;animation:heroImgReveal 2s ease-out 2.5s forwards,heroImgScale 8s ease-out 2.5s forwards;}
+@keyframes heroImgReveal{from{opacity:0;}to{opacity:0.35;}}
+@keyframes heroImgScale{from{transform:scale(1.1);}to{transform:scale(1);}}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,26,26,0.6) 0%,rgba(26,26,26,0.75) 50%,rgba(26,26,26,0.95) 100%);}
+
+/* Hero wheat line sweep */
+.hero-wheat-line{position:absolute;top:50%;left:0;width:100%;height:2px;z-index:1;overflow:hidden;}
+.hero-wheat-line::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,var(--gold),transparent);animation:wheatSweep 1.5s ease-out 0.3s forwards;}
+@keyframes wheatSweep{from{left:-100%;}to{left:100%;}}
+
+/* Grain particles */
+.hero-particles{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden;}
+.particle{position:absolute;width:3px;height:3px;border-radius:50%;background:var(--gold);opacity:0;animation:particleFloat 4s ease-out 1s forwards;}
+@keyframes particleFloat{0%{opacity:0;transform:translateY(0) scale(0);}20%{opacity:0.6;}100%{opacity:0;transform:translateY(-100px) scale(1.5);}}
+
+/* Light sweep */
+.hero-light-sweep{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden;}
+.hero-light-sweep::before{content:'';position:absolute;top:0;left:-150%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(245,240,232,0.08),transparent);transform:skewX(-20deg);animation:lightSweep 2.5s ease-out 3.5s forwards;}
+@keyframes lightSweep{from{left:-150%;}to{left:150%;}}
+
+.hero-content{position:relative;z-index:3;max-width:1400px;margin:0 auto;padding:0 40px;width:100%;}
+.hero-eyebrow{margin-bottom:28px;opacity:0;animation:fadeUp 0.8s ease-out 2s forwards;}
+.hero-eyebrow .line{display:inline-block;width:48px;height:1px;background:var(--gold);vertical-align:middle;margin-right:14px;}
+.hero-brand{margin-bottom:20px;opacity:0;animation:fadeUp 1s ease-out 1.5s forwards;}
+.hero-brand .name{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:500;color:var(--cream);letter-spacing:4px;}
+.hero-brand .company{font-family:'Space Grotesk',sans-serif;font-size:0.55rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-top:4px;}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,7vw,6rem);font-weight:500;line-height:1.05;letter-spacing:-1px;margin-bottom:28px;}
+.hero-title .line{display:block;overflow:hidden;}
+.hero-title .line span{display:inline-block;transform:translateY(100%);animation:textReveal 1s cubic-bezier(0.7,0,0.3,1) forwards;}
+.hero-title .line:nth-child(1) span{animation-delay:2.2s;}
+.hero-title .line:nth-child(2) span{animation-delay:2.5s;color:var(--gold);}
+@keyframes textReveal{to{transform:translateY(0);}}
+.hero-desc{font-size:clamp(1rem,1.4vw,1.15rem);color:rgba(245,240,232,0.65);max-width:520px;margin-bottom:44px;line-height:1.8;opacity:0;animation:fadeUp 1s ease-out 3s forwards;}
+.hero-cta{display:flex;gap:18px;flex-wrap:wrap;opacity:0;animation:fadeUp 1s ease-out 3.5s forwards;}
+.btn-solid{background:var(--cream);color:var(--charcoal);padding:16px 40px;border:none;font-size:0.82rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:all 0.35s;font-family:'Space Grotesk',sans-serif;position:relative;overflow:hidden;}
+.btn-solid::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:var(--gold);transition:left 0.4s;z-index:-1;}
+.btn-solid:hover::before{left:0;}
+.btn-solid:hover{color:var(--charcoal);transform:translateY(-2px);}
+.btn-solid svg{width:16px;height:16px;transition:transform 0.3s;}
+.btn-solid:hover svg{transform:translateX(4px);}
+.btn-line{background:transparent;color:var(--cream);padding:16px 40px;border:1px solid rgba(245,240,232,0.25);font-size:0.82rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:all 0.35s;font-family:'Space Grotesk',sans-serif;}
+.btn-line:hover{border-color:var(--gold);color:var(--gold);}
+.hero-scroll{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:10px;opacity:0;animation:fadeUp 1s ease-out 4s forwards;}
+.hero-scroll .text{font-family:'Space Grotesk',sans-serif;font-size:0.6rem;letter-spacing:3px;text-transform:uppercase;color:rgba(245,240,232,0.4);}
+.hero-scroll .line{width:1px;height:50px;background:linear-gradient(180deg,var(--gold),transparent);animation:scrollLine 2s ease-in-out infinite;}
+@keyframes scrollLine{0%,100%{transform:scaleY(1);opacity:0.4;}50%{transform:scaleY(1.5);opacity:1;}}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+
+/* === SECTION BASE === */
+.section{padding:140px 0;position:relative;overflow:hidden;}
+.section-inner{max-width:1400px;margin:0 auto;padding:0 40px;position:relative;z-index:1;}
+.section-cream{background:var(--cream);color:var(--charcoal);}
+.section-charcoal{background:var(--charcoal);color:var(--cream);}
+.section-wheat{background:var(--wheat);color:var(--charcoal);}
+.section-green{background:var(--green);color:var(--cream);}
+.section-dark{background:var(--charcoal-2);color:var(--cream);}
+
+/* === SIGNATURE SCROLL STORY === */
+.story-section{background:var(--charcoal);padding:100px 0;position:relative;overflow:hidden;}
+.story-track{display:flex;align-items:center;gap:0;min-height:60vh;position:relative;}
+.story-stage{flex:0 0 100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;opacity:0;transition:opacity 0.6s;}
+.story-stage.active{opacity:1;}
+.story-stage .icon{width:120px;height:120px;margin-bottom:24px;color:var(--gold);opacity:0.8;}
+.story-stage .label{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:500;color:var(--cream);letter-spacing:2px;}
+.story-stage .desc{font-family:'Space Grotesk',sans-serif;font-size:0.85rem;color:var(--wheat);letter-spacing:2px;text-transform:uppercase;margin-top:8px;}
+.story-arrow{position:absolute;top:50%;right:-30px;transform:translateY(-50%);color:var(--gold);opacity:0.3;font-size:2rem;}
+
+/* === INTRODUCTION === */
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.intro-text .eyebrow{margin-bottom:20px;}
+.intro-text h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:500;line-height:1.15;margin-bottom:28px;color:var(--charcoal);}
+.intro-text h2 em{font-style:italic;color:var(--gold);}
+.intro-text p{color:rgba(26,26,26,0.6);font-size:1.05rem;margin-bottom:20px;line-height:1.8;}
+.intro-image{position:relative;height:600px;overflow:hidden;border-radius:2px;}
+.intro-image img{width:100%;height:100%;object-fit:cover;filter:grayscale(15%);transition:transform 1.5s ease;}
+.intro-image:hover img{transform:scale(1.05);}
+.intro-image::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 60%,rgba(184,154,74,0.15));}
+.intro-tag{position:absolute;bottom:24px;left:24px;background:rgba(26,26,26,0.85);backdrop-filter:blur(10px);padding:12px 20px;border-left:2px solid var(--gold);}
+.intro-tag .label{font-family:'Space Grotesk',sans-serif;font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--cream);}
+.intro-tag .sub{font-size:0.72rem;color:var(--wheat);margin-top:2px;}
+
+/* === PRIMA COLLECTION (Horizontal scroll) === */
+.collection-section{background:var(--charcoal);overflow:hidden;position:relative;}
+.collection-header{padding:80px 40px 40px;max-width:1400px;margin:0 auto;}
+.collection-header .eyebrow{color:var(--gold);margin-bottom:16px;}
+.collection-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:500;color:var(--cream);}
+.collection-track{display:flex;gap:0;padding:40px 0 60px;transition:transform 0.1s linear;}
+.collection-item{flex:0 0 100vw;display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:70vh;align-items:center;}
+.collection-item-inner{max-width:1400px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;width:100%;}
+.collection-num{font-family:'Space Grotesk',sans-serif;font-size:0.7rem;letter-spacing:4px;color:var(--gold);margin-bottom:12px;}
+.collection-name{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,5rem);font-weight:500;color:var(--cream);line-height:1;margin-bottom:20px;letter-spacing:-1px;}
+.collection-desc{color:rgba(245,240,232,0.5);font-size:1rem;max-width:420px;line-height:1.8;margin-bottom:24px;}
+.collection-link{font-family:'Space Grotesk',sans-serif;font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:gap 0.3s;}
+.collection-link:hover{gap:14px;}
+.collection-img-wrap{position:relative;height:500px;overflow:hidden;border-radius:2px;}
+.collection-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease;}
+.collection-img-wrap:hover img{transform:scale(1.06);}
+.collection-img-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 70%,rgba(26,26,26,0.3));}
+.collection-progress{max-width:1400px;margin:0 auto 0;padding:0 40px 40px;display:flex;gap:8px;}
+.progress-dot{width:40px;height:3px;background:rgba(184,154,74,0.2);transition:background 0.3s;}
+.progress-dot.active{background:var(--gold);}
+
+/* Mobile collection carousel */
+@media(max-width:900px){
+  .collection-track{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:20px;}
+  .collection-item{flex:0 0 100vw;scroll-snap-align:center;}
+  .collection-item-inner{grid-template-columns:1fr;gap:32px;padding:0 24px;}
+  .collection-img-wrap{height:300px;}
+}
+
+/* === FLOUR SECTION === */
+.flour-section{position:relative;overflow:hidden;}
+.flour-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.flour-visual{position:relative;height:600px;overflow:hidden;}
+.flour-visual img{width:100%;height:100%;object-fit:cover;}
+.flour-visual .wheat-layer{position:absolute;inset:0;opacity:0.3;mix-blend-mode:overlay;}
+.flour-text h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:500;color:var(--charcoal);line-height:1.1;margin-bottom:24px;}
+.flour-text p{color:rgba(26,26,26,0.6);font-size:1.05rem;line-height:1.8;max-width:440px;}
+
+/* === PASTA SECTION === */
+.pasta-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.pasta-visual{position:relative;height:600px;overflow:hidden;}
+.pasta-visual img{width:100%;height:100%;object-fit:cover;}
+.pasta-text h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:500;color:var(--cream);line-height:1.1;margin-bottom:24px;}
+.pasta-text p{color:rgba(245,240,232,0.5);font-size:1.05rem;line-height:1.8;max-width:440px;}
+
+/* === MACARONI INTERACTIVE === */
+.macaroni-section{background:var(--cream);color:var(--charcoal);position:relative;overflow:hidden;}
+.macaroni-header{text-align:center;margin-bottom:60px;}
+.macaroni-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:500;color:var(--charcoal);}
+.macaroni-header p{color:rgba(26,26,26,0.5);font-size:0.95rem;margin-top:12px;}
+.macaroni-grid{display:flex;justify-content:center;align-items:center;gap:24px;flex-wrap:wrap;padding:40px 0;}
+.macaroni-shape{width:120px;height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;transition:all 0.4s ease;border:1px solid rgba(184,154,74,0.15);border-radius:50%;background:var(--cream-2);}
+.macaroni-shape:hover,.macaroni-shape.active{transform:scale(1.2);border-color:var(--gold);background:var(--wheat);}
+.macaroni-shape svg{width:50px;height:50px;color:var(--gold);transition:transform 0.4s;}
+.macaroni-shape:hover svg{transform:rotate(15deg);}
+.macaroni-shape .num{font-family:'Space Grotesk',sans-serif;font-size:0.6rem;letter-spacing:2px;color:rgba(26,26,26,0.4);margin-top:4px;}
+.macaroni-shape:hover .num,.macaroni-shape.active .num{color:var(--charcoal);}
+.macaroni-info{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);background:var(--charcoal);color:var(--cream);padding:16px 32px;border-radius:2px;opacity:0;transition:opacity 0.4s;text-align:center;min-width:200px;}
+.macaroni-info.visible{opacity:1;}
+.macaroni-info .name{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--gold);}
+.macaroni-info .desc{font-size:0.8rem;color:var(--wheat);margin-top:4px;}
+
+/* === BISCUITS === */
+.biscuits-section{position:relative;overflow:hidden;}
+.biscuits-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.biscuits-visual{position:relative;height:600px;overflow:hidden;}
+.biscuits-visual img{width:100%;height:100%;object-fit:cover;filter:sepia(10%) brightness(0.95);}
+.biscuits-text h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:500;color:var(--charcoal);line-height:1.1;margin-bottom:24px;}
+.biscuits-text p{color:rgba(26,26,26,0.6);font-size:1.05rem;line-height:1.8;max-width:440px;}
+
+/* === QUALITY === */
+.quality-section{background:var(--charcoal-2);color:var(--cream);position:relative;overflow:hidden;}
+.quality-header{text-align:center;margin-bottom:60px;}
+.quality-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:500;color:var(--cream);}
+.quality-stages{display:flex;justify-content:center;align-items:flex-start;gap:0;flex-wrap:wrap;position:relative;}
+.quality-stage{flex:1;min-width:180px;text-align:center;padding:32px 20px;position:relative;}
+.quality-stage::after{content:'';position:absolute;top:50%;right:-20px;width:40px;height:1px;background:rgba(184,154,74,0.2);}
+.quality-stage:last-child::after{display:none;}
+.quality-stage .icon{width:64px;height:64px;margin:0 auto 16px;color:var(--gold);opacity:0.7;transition:opacity 0.4s,transform 0.4s;}
+.quality-stage:hover .icon{opacity:1;transform:scale(1.1);}
+.quality-stage .num{font-family:'Space Grotesk',sans-serif;font-size:0.6rem;letter-spacing:3px;color:var(--gold);margin-bottom:8px;}
+.quality-stage .name{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--cream);margin-bottom:8px;}
+.quality-stage .desc{font-size:0.82rem;color:rgba(245,240,232,0.4);max-width:160px;margin:0 auto;line-height:1.6;}
+.quality-line{position:absolute;top:50%;left:10%;right:10%;height:1px;background:rgba(184,154,74,0.1);z-index:0;}
+.quality-line-fill{position:absolute;top:0;left:0;height:100%;width:0;background:var(--gold);transition:width 0.3s;}
+
+@media(max-width:768px){
+  .quality-stages{flex-direction:column;gap:32px;}
+  .quality-stage::after{display:none;}
+  .quality-line{display:none;}
+}
+
+/* === SCALE STATS === */
+.scale-section{background:var(--charcoal);text-align:center;position:relative;overflow:hidden;}
+.scale-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;max-width:1200px;margin:0 auto;}
+.scale-stat{padding:40px 20px;border-top:1px solid rgba(184,154,74,0.15);}
+.scale-num{font-family:'Cormorant Garamond',serif;font-size:clamp(4rem,9vw,7rem);font-weight:500;color:var(--gold);line-height:1;margin-bottom:12px;}
+.scale-unit{font-family:'Space Grotesk',sans-serif;font-size:1rem;letter-spacing:3px;text-transform:uppercase;color:var(--wheat);margin-bottom:8px;}
+.scale-label{font-size:0.85rem;color:rgba(245,240,232,0.4);letter-spacing:1px;}
+@media(max-width:768px){
+  .scale-stats{grid-template-columns:1fr;gap:0;}
+}
+
+/* === ADDIS ↔ DUKEM === */
+.geo-section{background:var(--charcoal);position:relative;overflow:hidden;padding:120px 0;}
+.geo-header{text-align:center;margin-bottom:60px;}
+.geo-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,6vw,4.5rem);font-weight:500;color:var(--cream);line-height:1.1;}
+.geo-header h2 span{display:block;color:var(--gold);}
+.geo-visual{position:relative;max-width:900px;margin:0 auto;height:400px;}
+.geo-point{position:absolute;display:flex;flex-direction:column;align-items:center;gap:8px;}
+.geo-point .dot{width:16px;height:16px;border-radius:50%;background:var(--gold);box-shadow:0 0 20px rgba(184,154,74,0.4);position:relative;}
+.geo-point .dot::before{content:'';position:absolute;inset:-8px;border:1px solid var(--gold);border-radius:50%;opacity:0.3;animation:geoPulse 2s ease-out infinite;}
+@keyframes geoPulse{0%{transform:scale(1);opacity:0.4;}100%{transform:scale(2.5);opacity:0;}}
+.geo-point .name{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--cream);}
+.geo-point .sub{font-family:'Space Grotesk',sans-serif;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--wheat);}
+.geo-point .tag{font-size:0.72rem;color:rgba(245,240,232,0.4);margin-top:2px;}
+.geo-addis{top:20%;left:15%;}
+.geo-dukem{top:65%;right:15%;}
+.geo-route{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;}
+.geo-label{position:absolute;font-family:'Space Grotesk',sans-serif;font-size:0.65rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);opacity:0;transition:opacity 0.5s;}
+.geo-label.show{opacity:1;}
+
+@media(max-width:768px){
+  .geo-addis{top:10%;left:50%;transform:translateX(-50%);}
+  .geo-dukem{top:70%;left:50%;transform:translateX(-50%);}
+}
+
+/* === ETHIOPIA MAP === */
+.map-section{background:var(--green);color:var(--cream);position:relative;overflow:hidden;}
+.map-header{text-align:center;margin-bottom:60px;}
+.map-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:500;color:var(--cream);}
+.map-visual{position:relative;max-width:800px;margin:0 auto;height:500px;display:flex;align-items:center;justify-content:center;}
+.map-svg{width:100%;height:100%;max-width:600px;}
+.map-node{fill:var(--gold);}
+.map-route{stroke:var(--gold);stroke-width:1;fill:none;opacity:0;stroke-dasharray:4 4;animation:routeDraw 2s ease-out forwards;}
+@keyframes routeDraw{from{opacity:0;stroke-dashoffset:200;}to{opacity:0.4;stroke-dashoffset:0;}}
+.map-stages{display:flex;justify-content:center;gap:60px;margin-top:40px;flex-wrap:wrap;}
+.map-stage{text-align:center;}
+.map-stage .num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--gold);}
+.map-stage .label{font-family:'Space Grotesk',sans-serif;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--cream);margin-top:4px;}
+
+/* === CUSTOMERS MARQUEE === */
+.customers-section{background:var(--charcoal);overflow:hidden;padding:100px 0;}
+.customers-header{text-align:center;margin-bottom:48px;}
+.customers-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:500;color:var(--cream);}
+.customers-marquee{display:flex;overflow:hidden;position:relative;}
+.customers-marquee::before,.customers-marquee::after{content:'';position:absolute;top:0;bottom:0;width:120px;z-index:2;pointer-events:none;}
+.customers-marquee::before{left:0;background:linear-gradient(90deg,var(--charcoal),transparent);}
+.customers-marquee::after{right:0;background:linear-gradient(270deg,var(--charcoal),transparent);}
+.marquee-track{display:flex;gap:60px;animation:marqueeScroll 30s linear infinite;flex-shrink:0;}
+@keyframes marqueeScroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.marquee-item{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:rgba(245,240,232,0.4);white-space:nowrap;transition:color 0.3s;}
+.marquee-item:hover{color:var(--gold);}
+.customers-categories{max-width:1000px;margin:48px auto 0;display:flex;justify-content:center;gap:40px;flex-wrap:wrap;}
+.cat-item{font-family:'Space Grotesk',sans-serif;font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;color:rgba(245,240,232,0.4);text-align:center;}
+.cat-item span{display:block;font-size:0.65rem;color:var(--wheat);margin-top:4px;}
+
+/* === COMMUNITY === */
+.community-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.community-text h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:500;color:var(--charcoal);line-height:1.1;margin-bottom:24px;}
+.community-text p{color:rgba(26,26,26,0.6);font-size:1.05rem;line-height:1.8;max-width:440px;margin-bottom:16px;}
+.community-visual{position:relative;height:500px;overflow:hidden;}
+.community-visual img{width:100%;height:100%;object-fit:cover;filter:grayscale(20%);}
+.community-tag{position:absolute;bottom:24px;left:24px;background:rgba(245,240,232,0.92);backdrop-filter:blur(10px);padding:12px 20px;border-left:2px solid var(--gold);}
+.community-tag .label{font-family:'Space Grotesk',sans-serif;font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--charcoal);}
+
+/* === CONTACT === */
+.contact-section{background:var(--cream);color:var(--charcoal);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.contact-left h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:500;color:var(--charcoal);line-height:1.1;margin-bottom:24px;}
+.contact-left p{color:rgba(26,26,26,0.55);font-size:1.05rem;margin-bottom:32px;line-height:1.8;}
+.contact-buttons{display:flex;flex-direction:column;gap:12px;}
+.contact-btn{display:inline-flex;align-items:center;gap:12px;padding:16px 28px;border:1px solid rgba(26,26,26,0.15);text-decoration:none;color:var(--charcoal);font-family:'Space Grotesk',sans-serif;font-size:0.78rem;letter-spacing:1px;text-transform:uppercase;transition:all 0.35s;}
+.contact-btn:hover{border-color:var(--gold);background:var(--wheat);color:var(--charcoal);}
+.contact-btn svg{width:18px;height:18px;color:var(--gold);}
+.contact-info{display:flex;flex-direction:column;gap:28px;}
+.contact-row{display:flex;gap:16px;align-items:flex-start;}
+.contact-row .icon{width:20px;height:20px;color:var(--gold);flex-shrink:0;margin-top:4px;}
+.contact-row .label{font-family:'Space Grotesk',sans-serif;font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;color:rgba(26,26,26,0.4);margin-bottom:4px;}
+.contact-row .value{font-size:1rem;color:var(--charcoal);}
+.contact-row .value a{color:var(--charcoal);text-decoration:none;transition:color 0.3s;}
+.contact-row .value a:hover{color:var(--gold);}
+
+@media(max-width:768px){
+  .contact-grid{grid-template-columns:1fr;gap:40px;}
+}
+
+/* === FOOTER === */
+.footer{background:var(--charcoal);color:var(--cream);padding:80px 0 32px;}
+.footer-inner{max-width:1400px;margin:0 auto;padding:0 40px;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:60px;margin-bottom:48px;}
+.footer-brand .name{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--cream);letter-spacing:2px;}
+.footer-brand .sub{font-family:'Space Grotesk',sans-serif;font-size:0.6rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-top:4px;}
+.footer-brand .addr{font-size:0.85rem;color:rgba(245,240,232,0.4);margin-top:16px;line-height:1.7;}
+.footer-col h4{font-family:'Space Grotesk',sans-serif;font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.footer-col a{display:block;font-size:0.85rem;color:rgba(245,240,232,0.4);text-decoration:none;margin-bottom:10px;transition:color 0.3s;}
+.footer-col a:hover{color:var(--cream);}
+.footer-bottom{padding-top:32px;border-top:1px solid rgba(184,154,74,0.1);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.footer-bottom .copy{font-size:0.72rem;color:rgba(245,240,232,0.3);}
+.footer-bottom .contact-mini{font-size:0.75rem;color:rgba(245,240,232,0.4);}
+.footer-bottom .contact-mini a{color:var(--gold);text-decoration:none;}
+
+@media(max-width:768px){
+  .footer-top{grid-template-columns:1fr;gap:32px;}
+  .footer-bottom{flex-direction:column;text-align:center;}
+}
+
+/* === SECTION TRANSITIONS === */
+.section-divider{height:1px;background:repeating-linear-gradient(90deg,var(--gold) 0,var(--gold) 6px,transparent 6px,transparent 12px);opacity:0.1;max-width:1400px;margin:0 auto;}
+
+/* === RESPONSIVE GRID === */
+@media(max-width:900px){
+  .intro-grid,.flour-grid,.pasta-grid,.biscuits-grid,.community-grid{grid-template-columns:1fr;gap:40px;}
+  .intro-image,.flour-visual,.pasta-visual,.biscuits-visual{height:360px;}
+  .section{padding:80px 0;}
+  .section-inner{padding:0 24px;}
+  .nav-inner{padding:0 24px;}
+  .hero-content{padding:0 24px;}
+}
+
+/* === REDUCED MOTION === */
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;scroll-behavior:auto!important;}
+}
+</style>
+</head>
+<body data-lang="en">
+
+<div class="grain-overlay"></div>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <span class="brand">PRIMA</span>
+      <span class="sub" data-en="Ten Day Belt" data-am="ጠንድድበልት">Ten Day Belt</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#collection" data-en="Products" data-am="ምርቶች">Products</a>
+      <a href="#intro" data-en="Our Story" data-am="ታሪካችን">Our Story</a>
+      <a href="#quality" data-en="Quality" data-am="ጥራት">Quality</a>
+      <a href="#map" data-en="Distribution" data-am="ስርጭት">Distribution</a>
+      <a href="#contact" data-en="Contact" data-am="ያግኙን">Contact</a>
+    </div>
+    <button class="lang-btn" id="langBtn" aria-label="Switch language">EN</button>
+    <button class="nav-burger" id="navBurger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <img src="https://images.pexels.com/photos/3260848/pexels-photo-3260848.jpeg?auto=compress&cs=tinysrgb&w=1920" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=1920'" alt="Golden wheat field at harvest" loading="eager">
+  </div>
+  <div class="hero-wheat-line"></div>
+  <div class="hero-particles" id="heroParticles"></div>
+  <div class="hero-light-sweep"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="line"></span>
+      <span class="eyebrow" data-en="Ethiopian Food Manufacturing · Established 2000" data-am="የኢትዮጵያ ምግብ ምርት · ከ2000 ጀምሮ">Ethiopian Food Manufacturing · Established 2000</span>
+    </div>
+    <div class="hero-brand">
+      <div class="name">PRIMA</div>
+      <div class="company" data-en="Ten Day Belt General Trading PLC" data-am="ጠንድድበልት ጀነራል ትሬዲንግ ሲ.ኤል.ሲ.">Ten Day Belt General Trading PLC</div>
+    </div>
+    <h1 class="hero-title">
+      <span class="line"><span data-en="Made for everyday." data-am="ለዕለት ቀን ተሰራ።">Made for everyday.</span></span>
+      <span class="line"><span data-en="Built with purpose." data-am="በዓላማ ተሰራ።">Built with purpose.</span></span>
+    </h1>
+    <p class="hero-desc" data-en="From Ethiopian food manufacturing to tables across the country." data-am="ከኢትዮጵያ ምግብ ምርት እስከ ሀገር አቀፋዊ ሰንተሮች።">From Ethiopian food manufacturing to tables across the country.</p>
+    <div class="hero-cta">
+      <a href="#collection" class="btn-solid" data-en="Explore PRIMA" data-am="PRIMAን ያስሱ">
+        Explore PRIMA
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#intro" class="btn-line" data-en="Our Story" data-am="ታሪካችን">Our Story</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span class="text" data-en="Scroll" data-am="ወደታች">Scroll</span>
+    <div class="line"></div>
+  </div>
+</section>
+
+<!-- SIGNATURE SCROLL STORY: WHEAT → TABLE -->
+<section class="story-section" id="story">
+  <div class="section-inner">
+    <div class="story-track" id="storyTrack">
+      <div class="story-stage" data-stage="0">
+        <svg class="icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M60 10 L60 110 M60 20 C50 25 45 35 50 45 M60 20 C70 25 75 35 70 45 M60 35 C50 40 45 50 50 58 M60 35 C70 40 75 50 70 58 M60 50 C50 55 45 65 50 72 M60 50 C70 55 75 65 70 72" stroke-width="1"/><ellipse cx="60" cy="100" rx="4" ry="6" fill="currentColor"/></svg>
+        <div class="label" data-en="Wheat" data-am="ስንድ">Wheat</div>
+        <div class="desc" data-en="Ethiopian grain" data-am="የኢትዮጵያ ጥሬ ዕቃ">Ethiopian grain</div>
+      </div>
+      <div class="story-stage" data-stage="1">
+        <svg class="icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="60" cy="60" r="40" fill="none"/><circle cx="50" cy="50" r="3" fill="currentColor"/><circle cx="70" cy="50" r="3" fill="currentColor"/><circle cx="60" cy="60" r="3" fill="currentColor"/><circle cx="50" cy="70" r="3" fill="currentColor"/><circle cx="70" cy="70" r="3" fill="currentColor"/><circle cx="40" cy="60" r="3" fill="currentColor"/><circle cx="80" cy="60" r="3" fill="currentColor"/></svg>
+        <div class="label" data-en="Grain" data-am="ድንቅል">Grain</div>
+        <div class="desc" data-en="Selected & tested" data-am="የተመረጠና የተፈተሸ">Selected & tested</div>
+      </div>
+      <div class="story-stage" data-stage="2">
+        <svg class="icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M40 30 C40 25 50 25 60 25 C70 25 80 25 80 30 C80 35 70 35 60 35 C50 35 40 35 40 30 Z" fill="currentColor" opacity="0.3"/><path d="M40 50 C40 45 50 45 60 45 C70 45 80 45 80 50 C80 55 70 55 60 55 C50 55 40 55 40 50 Z" fill="currentColor" opacity="0.3"/><path d="M40 70 C40 65 50 65 60 65 C70 65 80 65 80 70 C80 75 70 75 60 75 C50 75 40 75 40 70 Z" fill="currentColor" opacity="0.3"/><path d="M40 30 L80 30 M40 50 L80 50 M40 70 L80 70"/></svg>
+        <div class="label" data-en="Flour" data-am="ዱቄት">Flour</div>
+        <div class="desc" data-en="Milled with precision" data-am="በትክክል የተፈጨ">Milled with precision</div>
+      </div>
+      <div class="story-stage" data-stage="3">
+        <svg class="icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M50 20 C40 30 35 50 40 70 C45 80 55 85 60 85 C65 85 75 80 80 70 C85 50 80 30 70 20" fill="none"/><path d="M50 20 C55 18 65 18 70 20" fill="currentColor" opacity="0.3"/></svg>
+        <div class="label" data-en="Dough" data-am="መኖ">Dough</div>
+        <div class="desc" data-en="Crafted by hand" data-am="በእጅ የተሰራ">Crafted by hand</div>
+      </div>
+      <div class="story-stage" data-stage="4">
+        <svg class="icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M30 40 C40 35 50 35 60 40 C70 35 80 35 90 40 M30 60 C40 55 50 55 60 60 C70 55 80 55 90 60 M30 80 C40 75 50 75 60 80 C70 75 80 75 90 80" fill="none"/></svg>
+        <div class="label" data-en="Pasta" data-am="ፓስታ">Pasta</div>
+        <div class="desc" data-en="Shaped & cut" data-am="ተቆርጧልና ተቀምጧል">Shaped & cut</div>
+      </div>
+      <div class="story-stage" data-stage="5">
+        <svg class="icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M40 40 C40 30 50 30 60 30 C70 30 80 30 80 40 C80 50 70 50 60 50 C50 50 40 50 40 40 Z" fill="none"/><path d="M40 40 C40 50 50 60 60 60 C70 60 80 50 80 40" fill="none"/></svg>
+        <div class="label" data-en="Macaroni" data-am="ማካሮኒ">Macaroni</div>
+        <div class="desc" data-en="Seven shapes & more" data-am="ሰባት ቅርጾችና ከዚያ በላይ">Seven shapes & more</div>
+      </div>
+      <div class="story-stage" data-stage="6">
+        <svg class="icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="60" cy="60" r="30" fill="none"/><circle cx="50" cy="50" r="4" fill="currentColor" opacity="0.3"/><circle cx="70" cy="55" r="3" fill="currentColor" opacity="0.3"/><circle cx="55" cy="68" r="3" fill="currentColor" opacity="0.3"/><circle cx="68" cy="68" r="4" fill="currentColor" opacity="0.3"/></svg>
+        <div class="label" data-en="Biscuit" data-am="ቂኪ">Biscuit</div>
+        <div class="desc" data-en="Warm & golden" data-am="ሞቅ ያለና ወርቃማ">Warm & golden</div>
+      </div>
+      <div class="story-stage" data-stage="7">
+        <svg class="icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 80 L100 80 L100 90 L20 90 Z" fill="none"/><path d="M30 60 C30 50 40 45 50 45 C60 45 70 50 70 60 L70 80 L30 80 Z" fill="none"/><path d="M35 55 L65 55 M35 65 L65 65" stroke-width="0.8" opacity="0.5"/></svg>
+        <div class="label" data-en="Table" data-am="ቴብል">Table</div>
+        <div class="desc" data-en="Everyday Ethiopia" data-am="በየቀኑ ኢትዮጵያ">Everyday Ethiopia</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRODUCTION -->
+<section class="section section-cream" id="intro">
+  <div class="section-inner">
+    <div class="intro-grid">
+      <div class="intro-text" data-aos="fade-right">
+        <div class="eyebrow" style="color:var(--gold-2)" data-en="Our Story" data-am="ታሪካችን">Our Story</div>
+        <h2 data-en="Turning local production into <em>everyday essentials.</em>" data-am="የአካባቢ ምርትን ወደ እለት ቀን አስፈላጊነቶች መቀየር።">Turning local production into <em>everyday essentials.</em></h2>
+        <p data-en="Since 2000, Ten Day Belt General Trading PLC has been producing food in Ethiopia under the PRIMA name — flour, pasta, macaroni, and biscuits made for everyday life." data-am="ከ2000 ጀምሮ፣ ጠንድድበልት ጀነራል ትሬዲንግ ሲ.ኤል.ሲ. በኢትዮጵያ ምግብ ምርቶችን በPRIMA ስም ያመረተ — ዱቄት፣ ፓስታ፣ ማካሮኒ እና ቂኪ ለእለት ቀን ኑሮ የተሰሩ።">Since 2000, Ten Day Belt General Trading PLC has been producing food in Ethiopia under the PRIMA name — flour, pasta, macaroni, and biscuits made for everyday life.</p>
+        <p data-en="What started as a vision to manufacture pasta locally has grown into a operation spanning a 30,000 m² facility, 900+ people, and customers across the country." data-am="ፓስታን በአካባቢ ለማምረት የነበረው ራዕይ ወደ 30,000 ሜትር ስኩዌር መገንባታ ቦታ፣ ከ900 በላይ ሰራተኞችና በሀገር አቀፍ ደረጃ ያሉ ደንበኞች የሚገኙበት ስራ ደረጃ ያደገበት።">What started as a vision to manufacture pasta locally has grown into a operation spanning a 30,000 m² facility, 900+ people, and customers across the country.</p>
+      </div>
+      <div class="intro-image" data-aos="fade-left" data-aos-delay="200">
+        <img src="https://images.pexels.com/photos/1294886/pexels-photo-1294886.jpeg?auto=compress&cs=tinysrgb&w=1200" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=1920'" alt="Wheat grains close-up macro photography" loading="lazy">
+        <div class="intro-tag">
+          <div class="label" data-en="Ethiopian Wheat" data-am="የኢትዮጵያ ስንድ">Ethiopian Wheat</div>
+          <div class="sub" data-en="Locally sourced · Representative image" data-am="ከአካባቢ የተገኘ · ወኪል ምስል">Locally sourced · Representative image</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRIMA COLLECTION (Horizontal scroll) -->
+<section class="collection-section" id="collection">
+  <div class="collection-header" data-aos="fade-up">
+    <div class="eyebrow" data-en="The Collection" data-am="ስብስብ">The Collection</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;color:var(--cream);" data-en="The PRIMA Collection" data-am="የPRIMA ስብስብ">The PRIMA Collection</h2>
+  </div>
+  <div class="collection-track" id="collectionTrack">
+    <!-- 01 FLOUR -->
+    <div class="collection-item">
+      <div class="collection-item-inner">
+        <div class="collection-text" data-aos="fade-right">
+          <div class="collection-num" data-en="01 — Product" data-am="01 — ምርት">01 — Product</div>
+          <div class="collection-name" data-en="Flour" data-am="ዱቄት">Flour</div>
+          <p class="collection-desc" data-en="The foundation of every PRIMA product — milled from selected wheat for consistent quality across every batch." data-am="የእያንዳንዱ PRIMA ምርት መሰረት — አሽከርካሪ ጥራት ለማምጣት ከተመረጠ ስንድ የተፈጨ።">The foundation of every PRIMA product — milled from selected wheat for consistent quality across every batch.</p>
+          <a href="#flour" class="collection-link" data-en="View Section" data-am="ክፍል ይመልከቱ">View Section <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="collection-img-wrap" data-aos="fade-left">
+          <img src="https://images.pexels.com/photos/1294886/pexels-photo-1294886.jpeg?auto=compress&cs=tinysrgb&w=1200" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=1920'" alt="PRIMA flour — wheat grains macro" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <!-- 02 PASTA -->
+    <div class="collection-item">
+      <div class="collection-item-inner">
+        <div class="collection-text" data-aos="fade-right">
+          <div class="collection-num" data-en="02 — Product" data-am="02 — ምርት">02 — Product</div>
+          <div class="collection-name" data-en="Pasta" data-am="ፓስታ">Pasta</div>
+          <p class="collection-desc" data-en="Made to move through the kitchen — produced with modern Italian technology for texture and consistency." data-am="ከኩሽና በኩል ለመንቀስ የተሰራ — ለቅርጽና ለአንድነት በዘመናዊ የጣልያን ቴክኖሎጂ የተመረተ።">Made to move through the kitchen — produced with modern Italian technology for texture and consistency.</p>
+          <a href="#pasta" class="collection-link" data-en="View Section" data-am="ክፍል ይመልከቱ">View Section <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="collection-img-wrap" data-aos="fade-left">
+          <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=1200" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=1920'" alt="PRIMA pasta — premium pasta close-up" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <!-- 03 MACARONI -->
+    <div class="collection-item">
+      <div class="collection-item-inner">
+        <div class="collection-text" data-aos="fade-right">
+          <div class="collection-num" data-en="03 — Product" data-am="03 — ምርት">03 — Product</div>
+          <div class="collection-name" data-en="Macaroni" data-am="ማካሮኒ">Macaroni</div>
+          <p class="collection-desc" data-en="More than seven shapes produced — from everyday cuts to specialty forms for every dish." data-am="ከሰባት በላይ ቅርጾች የሚመረቱ — ከእለት ቀን ቁርጥራጮች እስከ ልዩ ቅርጾች ለእያንዳንዱ ምግብ።">More than seven shapes produced — from everyday cuts to specialty forms for every dish.</p>
+          <a href="#macaroni" class="collection-link" data-en="View Section" data-am="ክፍል ይመልከቱ">View Section <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="collection-img-wrap" data-aos="fade-left">
+          <img src="https://images.pexels.com/photos/4194639/pexels-photo-4194639.jpeg?auto=compress&cs=tinysrgb&w=1200" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=1920'" alt="PRIMA macaroni — assorted pasta shapes" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <!-- 04 BISCUITS -->
+    <div class="collection-item">
+      <div class="collection-item-inner">
+        <div class="collection-text" data-aos="fade-right">
+          <div class="collection-num" data-en="04 — Product" data-am="04 — ምርት">04 — Product</div>
+          <div class="collection-name" data-en="Biscuits" data-am="ቂኪዎች">Biscuits</div>
+          <p class="collection-desc" data-en="Made for the moments between meals — diverse flavors baked warm for everyday enjoyment." data-am="ምግብ በሰንተር ላይ ለሚኖሩ ጊዜዎች የተሰሩ — የተለያዩ ጣዕሞች ለእለት ቀን እየተቆረሱ ሞቅ ያለ።">Made for the moments between meals — diverse flavors baked warm for everyday enjoyment.</p>
+          <a href="#biscuits" class="collection-link" data-en="View Section" data-am="ክፍል ይመልከቱ">View Section <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="collection-img-wrap" data-aos="fade-left">
+          <img src="https://images.pexels.com/photos/2302653/pexels-photo-2302653.jpeg?auto=compress&cs=tinysrgb&w=1200" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=1920'" alt="PRIMA biscuits — close-up biscuit texture" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="collection-progress" id="collectionProgress">
+    <div class="progress-dot active"></div>
+    <div class="progress-dot"></div>
+    <div class="progress-dot"></div>
+    <div class="progress-dot"></div>
+  </div>
+</section>
+
+<!-- FLOUR SECTION -->
+<section class="section section-cream" id="flour">
+  <div class="section-inner">
+    <div class="flour-grid">
+      <div class="flour-visual" data-aos="fade-right">
+        <img src="https://images.pexels.com/photos/1294886/pexels-photo-1294886.jpeg?auto=compress&cs=tinysrgb&w=1200" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=1920'" alt="Wheat grains transitioning to flour" loading="lazy">
+      </div>
+      <div class="flour-text" data-aos="fade-left" data-aos-delay="200">
+        <div class="eyebrow" style="color:var(--gold-2)" data-en="01 — Flour" data-am="01 — ዱቄት">01 — Flour</div>
+        <h2 data-en="The Foundation." data-am="መሠረት።">The Foundation.</h2>
+        <p data-en="Every product begins with wheat. Selected grain, milled to consistent texture — the base of everything PRIMA makes." data-am="እያንዳንዱ ምርት ከስንድ ይጀምራል። የተመረጠ ጥሬ ዕቃ፣ በትክክል የተፈጨ — የPRIMA ሁሉም ምርቶች መሠረት።">Every product begins with wheat. Selected grain, milled to consistent texture — the base of everything PRIMA makes.</p>
+        <p data-en="From grain to flour, the process is built on quality inputs and modern milling technology." data-am="ከጥሬ ዕቃ እስከ ዱቄት፣ ሂደቱ በጥራት ግብዓቶችና በዘመናዊ የመፍጨት ቴክኖሎጂ ላይ የተመሰረተ።">From grain to flour, the process is built on quality inputs and modern milling technology.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PASTA SECTION -->
+<section class="section section-charcoal" id="pasta">
+  <div class="section-inner">
+    <div class="pasta-grid">
+      <div class="pasta-text" data-aos="fade-right">
+        <div class="eyebrow" data-en="02 — Pasta" data-am="02 — ፓስታ">02 — Pasta</div>
+        <h2 data-en="Made to move through the kitchen." data-am="ከኩሽና በኩል ለመንቀስ የተሰራ።">Made to move through the kitchen.</h2>
+        <p data-en="Produced with modern Italian technology, PRIMA pasta is built for texture, consistency, and the everyday meal." data-am="በዘመናዊ የጣልያን ቴክኖሎጂ የተመረተ፣ PRIMA ፓስታ ለቅርጽ፣ ለአንድነትና ለእለት ቀን ምግብ የተሰራ።">Produced with modern Italian technology, PRIMA pasta is built for texture, consistency, and the everyday meal.</p>
+      </div>
+      <div class="pasta-visual" data-aos="fade-left" data-aos-delay="200">
+        <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=1200" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=1920'" alt="Premium pasta close-up photography" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MACARONI INTERACTIVE -->
+<section class="section macaroni-section" id="macaroni" style="position:relative;">
+  <div class="section-inner">
+    <div class="macaroni-header" data-aos="fade-up">
+      <div class="eyebrow" style="color:var(--gold-2)" data-en="03 — Macaroni" data-am="03 — ማካሮኒ">03 — Macaroni</div>
+      <h2 data-en="Seven shapes. And more." data-am="ሰባት ቅርጾች። እና ከዚያ በላይ።">Seven shapes. And more.</h2>
+      <p data-en="Hover or tap to explore the collection." data-am="ለመምራት አፅናን ወይም ይንኩ።">Hover or tap to explore the collection.</p>
+    </div>
+    <div class="macaroni-grid" id="macaroniGrid" data-aos="fade-up" data-aos-delay="200">
+      <div class="macaroni-shape" data-name="Shape 01" data-desc="Short cut · everyday use">
+        <svg viewBox="0 0 50 50" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 15 L35 15 L35 35 L15 35 Z" fill="none"/><path d="M15 15 L35 35 M35 15 L15 35" stroke-width="1" opacity="0.4"/></svg>
+        <div class="num">01</div>
+      </div>
+      <div class="macaroni-shape" data-name="Shape 02" data-desc="Elbow curve · classic form">
+        <svg viewBox="0 0 50 50" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 35 C15 20 25 15 35 15" fill="none"/><path d="M15 35 C15 30 20 25 25 25" stroke-width="1" opacity="0.4"/></svg>
+        <div class="num">02</div>
+      </div>
+      <div class="macaroni-shape" data-name="Shape 03" data-desc="Tube cut · straight">
+        <svg viewBox="0 0 50 50" fill="none" stroke="currentColor" stroke-width="2"><rect x="12" y="18" width="26" height="14" rx="7" fill="none"/><line x1="12" y1="25" x2="38" y2="25" stroke-width="0.8" opacity="0.4"/></svg>
+        <div class="num">03</div>
+      </div>
+      <div class="macaroni-shape" data-name="Shape 04" data-desc="Spiral · twisted form">
+        <svg viewBox="0 0 50 50" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 15 C25 20 25 30 15 35 M25 15 C35 20 35 30 25 35 M20 15 C30 20 30 30 20 35" fill="none"/></svg>
+        <div class="num">04</div>
+      </div>
+      <div class="macaroni-shape" data-name="Shape 05" data-desc="Ribbon · flat cut">
+        <svg viewBox="0 0 50 50" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 20 L35 20 L35 30 L15 30 Z" fill="none"/><path d="M20 20 L20 30 M25 20 L25 30 M30 20 L30 30" stroke-width="0.8" opacity="0.4"/></svg>
+        <div class="num">05</div>
+      </div>
+      <div class="macaroni-shape" data-name="Shape 06" data-desc="Shell · curved form">
+        <svg viewBox="0 0 50 50" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 20 C15 15 35 15 35 20 C35 30 25 35 15 30 Z" fill="none"/><path d="M20 22 C20 20 30 20 30 22" stroke-width="0.8" opacity="0.4"/></svg>
+        <div class="num">06</div>
+      </div>
+      <div class="macaroni-shape" data-name="Shape 07" data-desc="Fusilli · spiral cut">
+        <svg viewBox="0 0 50 50" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 15 C30 18 30 22 20 25 C30 28 30 32 20 35" fill="none"/></svg>
+        <div class="num">07</div>
+      </div>
+      <div class="macaroni-shape" data-name="Shape 08+" data-desc="And more shapes available">
+        <svg viewBox="0 0 50 50" fill="none" stroke="currentColor" stroke-width="2"><circle cx="25" cy="25" r="12" fill="none"/><text x="25" y="29" text-anchor="middle" font-size="10" fill="currentColor" stroke="none" font-family="serif">+</text></svg>
+        <div class="num">08+</div>
+      </div>
+    </div>
+    <div class="macaroni-info" id="macaroniInfo">
+      <div class="name"></div>
+      <div class="desc"></div>
+    </div>
+  </div>
+</section>
+
+<!-- BISCUITS SECTION -->
+<section class="section section-cream" id="biscuits">
+  <div class="section-inner">
+    <div class="biscuits-grid">
+      <div class="biscuits-text" data-aos="fade-right">
+        <div class="eyebrow" style="color:var(--gold-2)" data-en="04 — Biscuits" data-am="04 — ቂኪዎች">04 — Biscuits</div>
+        <h2 data-en="Made for the moments between." data-am="በመካከለኛው ጊዜ ለሚደረጉ ነገሮች የተሰራ።">Made for the moments between.</h2>
+        <p data-en="Warm, textured, and crafted in diverse flavors — PRIMA biscuits are made for the everyday pause." data-am="ሞቅ ያለ፣ ገጽታ ያለው፣ በተለያዩ ጣዕሞች የተሰራ — PRIMA ቂኪዎች ለእለት ቀን ለሚደረገው ለፍጥነት የተሰሩ።">Warm, textured, and crafted in diverse flavors — PRIMA biscuits are made for the everyday pause.</p>
+        <p data-en="From the first bite to the last crumb, every biscuit is baked with the same attention as every other PRIMA product." data-am="ከመጀመሪያው ነከር እስከ መጨረሻው ቁራጭ፣ እያንዳንዱ ቂኪ ከሌሎች PRIMA ምርቶች ጋር በተመሳሳይ ትኩረት ይቆረሳል።">From the first bite to the last crumb, every biscuit is baked with the same attention as every other PRIMA product.</p>
+      </div>
+      <div class="biscuits-visual" data-aos="fade-left" data-aos-delay="200">
+        <img src="https://images.pexels.com/photos/2302653/pexels-photo-2302653.jpeg?auto=compress&cs=tinysrgb&w=1200" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=1920'" alt="Biscuits close-up with warm lighting" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUALITY SECTION -->
+<section class="section quality-section" id="quality">
+  <div class="section-inner">
+    <div class="quality-header" data-aos="fade-up">
+      <div class="eyebrow" data-en="Quality" data-am="ጥራት">Quality</div>
+      <h2 data-en="Quality, through every stage." data-am="ጥራት፣ በየደረጃው።">Quality, through every stage.</h2>
+    </div>
+    <div class="quality-stages" data-aos="fade-up" data-aos-delay="200">
+      <div class="quality-line"><div class="quality-line-fill" id="qualityLineFill"></div></div>
+      <div class="quality-stage">
+        <svg class="icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 30 C20 25 28 22 32 22 C36 22 44 25 44 30 C44 35 36 38 32 38 C28 38 20 35 20 30 Z" fill="none"/><path d="M32 38 L32 48 M28 48 L36 48" stroke-width="1.2"/></svg>
+        <div class="num">01</div>
+        <div class="name" data-en="Input" data-am="ግብዓት">Input</div>
+        <div class="desc" data-en="High-quality wheat and ingredients selected and received." data-am="ከፍተኛ ጥራት ያለው ስንድና ጥሬ ዕቃዎች ይመረጣሉና ይቀበላሉ።">High-quality wheat and ingredients selected and received.</div>
+      </div>
+      <div class="quality-stage">
+        <svg class="icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 20 L44 20 L44 44 L20 44 Z" fill="none"/><path d="M26 28 L38 28 M26 34 L34 34 M26 40 L36 40" stroke-width="1"/><circle cx="48" cy="22" r="3" fill="none"/></svg>
+        <div class="num">02</div>
+        <div class="name" data-en="Test" data-am="ፈተና">Test</div>
+        <div class="desc" data-en="Laboratory testing of inputs and production batches." data-am="ግብዓቶችና የምርት ቡድኖች የቤተ-ሙከራ ፈተና።">Laboratory testing of inputs and production batches.</div>
+      </div>
+      <div class="quality-stage">
+        <svg class="icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="16" y="24" width="32" height="20" rx="2" fill="none"/><path d="M22 24 L22 18 L42 18 L42 24" fill="none"/><path d="M24 30 L40 30 M24 36 L36 36" stroke-width="1" opacity="0.5"/></svg>
+        <div class="num">03</div>
+        <div class="name" data-en="Produce" data-am="ምርት">Produce</div>
+        <div class="desc" data-en="Modern Italian production technology in operation." data-am="ዘመናዊ የጣልያን ምርት ቴክኖሎጂ በስራ ላይ።">Modern Italian production technology in operation.</div>
+      </div>
+      <div class="quality-stage">
+        <svg class="icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="32" cy="32" r="16" fill="none"/><path d="M26 32 L30 36 L40 26" stroke-width="2"/></svg>
+        <div class="num">04</div>
+        <div class="name" data-en="Check" data-am="ግምገማ">Check</div>
+        <div class="desc" data-en="Every batch checked before it moves forward." data-am="እያንዳንዱ ቡድን ወደፊት ከመራመዱ በፊት ይገመገማል።">Every batch checked before it moves forward.</div>
+      </div>
+      <div class="quality-stage">
+        <svg class="icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 40 L24 40 L28 28 L40 28 L44 40 L48 40" fill="none"/><path d="M28 28 L40 28 L38 34 L30 34 Z" fill="none" opacity="0.5"/><path d="M24 40 L24 46 M40 40 L40 46" stroke-width="1"/></svg>
+        <div class="num">05</div>
+        <div class="name" data-en="Deliver" data-am="መላክ">Deliver</div>
+        <div class="desc" data-en="Products distributed to customers across Ethiopia." data-am="ምርቶች በኢትዮጵያ ላሉ ደንበኞች ይሰራጫሉ።">Products distributed to customers across Ethiopia.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MANUFACTURING SCALE -->
+<section class="section scale-section" id="scale">
+  <div class="section-inner">
+    <div data-aos="fade-up" style="text-align:center;margin-bottom:20px;">
+      <div class="eyebrow" data-en="Manufacturing Scale" data-am="የምርት ስፋት">Manufacturing Scale</div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:500;color:var(--cream);margin-bottom:60px;" data-en="Precision at scale." data-am="በስፋት ትክክለኝነት።">Precision at scale.</h2>
+    </div>
+    <div class="scale-stats">
+      <div class="scale-stat" data-aos="fade-up" data-aos-delay="0">
+        <div class="scale-num" data-counter="30000">0</div>
+        <div class="scale-unit">m²</div>
+        <div class="scale-label" data-en="Operating Facility" data-am="የስራ ቦታ">Operating Facility</div>
+      </div>
+      <div class="scale-stat" data-aos="fade-up" data-aos-delay="150">
+        <div class="scale-num" data-counter="900">0</div>
+        <div class="scale-unit">+</div>
+        <div class="scale-label" data-en="People" data-am="ሰዎች">People</div>
+      </div>
+      <div class="scale-stat" data-aos="fade-up" data-aos-delay="300">
+        <div class="scale-num" data-counter="2000">0</div>
+        <div class="scale-unit"></div>
+        <div class="scale-label" data-en="Established" data-am="የተመሰረተበት">Established</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADDIS ABABA ↔ DUKEM -->
+<section class="geo-section" id="geo">
+  <div class="section-inner">
+    <div class="geo-header" data-aos="fade-up">
+      <div class="eyebrow" data-en="Two Places" data-am="ሁለት ቦታዎች">Two Places</div>
+      <h2 data-en="Two places." data-am="ሁለት ቦታዎች።"><span data-en="One operation." data-am="አንድ ስራ።">One operation.</span></h2>
+    </div>
+    <div class="geo-visual" data-aos="zoom-in" data-aos-delay="200">
+      <svg class="geo-route" viewBox="0 0 900 400" preserveAspectRatio="none">
+        <path id="geoPath" d="M 135 120 Q 450 50 765 300" fill="none" stroke="rgba(184,154,74,0.15)" stroke-width="1" stroke-dasharray="4 4"/>
+        <path id="geoPathFill" d="M 135 120 Q 450 50 765 300" fill="none" stroke="var(--gold)" stroke-width="2" stroke-dasharray="800" stroke-dashoffset="800" opacity="0.8"/>
+      </svg>
+      <div class="geo-point geo-addis">
+        <div class="dot"></div>
+        <div class="name" data-en="Addis Ababa" data-am="አዲስ አበባ">Addis Ababa</div>
+        <div class="sub" data-en="Kality / around MIDROC" data-am="ካሊቲ / በሚድሮክ አካባቢ">Kality / around MIDROC</div>
+        <div class="tag" data-en="Commercial Presence" data-am="የንግድ ተገኝነት">Commercial Presence</div>
+      </div>
+      <div class="geo-point geo-dukem">
+        <div class="dot"></div>
+        <div class="name" data-en="Dukem" data-am="ዱከም">Dukem</div>
+        <div class="sub" data-en="Industrial Zone" data-am="ኢንዱስትሪ ዞን">Industrial Zone</div>
+        <div class="tag" data-en="Manufacturing Operation" data-am="የምርት ስራ">Manufacturing Operation</div>
+      </div>
+      <div class="geo-label" id="geoLabelManu" style="top:20%;left:45%;" data-en="Manufacturing →" data-am="ምርት →">Manufacturing →</div>
+      <div class="geo-label" id="geoLabelComm" style="top:55%;right:35%;" data-en="← Commercial Presence" data-am="← የንግድ ተገኝነት">← Commercial Presence</div>
+    </div>
+  </div>
+</section>
+
+<!-- ETHIOPIA DISTRIBUTION MAP -->
+<section class="section map-section" id="map">
+  <div class="section-inner">
+    <div class="map-header" data-aos="fade-up">
+      <div class="eyebrow" style="color:var(--gold);" data-en="Distribution" data-am="ስርጭት">Distribution</div>
+      <h2 data-en="From Addis Ababa to the country." data-am="ከአዲስ አበባ እስከ ሀገር።">From Addis Ababa to the country.</h2>
+    </div>
+    <div class="map-visual" data-aos="zoom-in" data-aos-delay="200">
+      <svg class="map-svg" viewBox="0 0 600 500" fill="none">
+        <!-- Stylized Ethiopia outline -->
+        <path d="M 150 80 L 200 60 L 260 70 L 320 50 L 380 80 L 440 100 L 480 150 L 490 200 L 470 260 L 480 310 L 440 360 L 380 390 L 320 400 L 260 390 L 200 370 L 160 340 L 130 290 L 120 240 L 130 190 L 140 130 Z" stroke="rgba(184,154,74,0.3)" stroke-width="1.5" fill="rgba(184,154,74,0.03)"/>
+        <!-- Addis Ababa center point -->
+        <circle cx="300" cy="230" r="6" fill="var(--gold)"/>
+        <circle cx="300" cy="230" r="12" fill="none" stroke="var(--gold)" stroke-width="1" opacity="0.4">
+          <animate attributeName="r" values="6;18;6" dur="2s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;0;0.6" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <text x="300" y="215" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" fill="var(--cream)" letter-spacing="2">ADDIS ABABA</text>
+        <!-- Distribution routes -->
+        <path class="map-route" d="M 300 230 L 180 150" style="animation-delay:0.5s"/>
+        <path class="map-route" d="M 300 230 L 420 130" style="animation-delay:1s"/>
+        <path class="map-route" d="M 300 230 L 200 340" style="animation-delay:1.5s"/>
+        <path class="map-route" d="M 300 230 L 430 310" style="animation-delay:2s"/>
+        <path class="map-route" d="M 300 230 L 350 380" style="animation-delay:2.5s"/>
+        <path class="map-route" d="M 300 230 L 150 250" style="animation-delay:3s"/>
+        <!-- Route endpoints -->
+        <circle cx="180" cy="150" r="3" fill="var(--gold)" opacity="0.6"/>
+        <circle cx="420" cy="130" r="3" fill="var(--gold)" opacity="0.6"/>
+        <circle cx="200" cy="340" r="3" fill="var(--gold)" opacity="0.6"/>
+        <circle cx="430" cy="310" r="3" fill="var(--gold)" opacity="0.6"/>
+        <circle cx="350" cy="380" r="3" fill="var(--gold)" opacity="0.6"/>
+        <circle cx="150" cy="250" r="3" fill="var(--gold)" opacity="0.6"/>
+      </svg>
+    </div>
+    <div class="map-stages" data-aos="fade-up" data-aos-delay="400">
+      <div class="map-stage">
+        <div class="num">01</div>
+        <div class="label" data-en="Addis Ababa" data-am="አዲስ አበባ">Addis Ababa</div>
+      </div>
+      <div class="map-stage">
+        <div class="num">02</div>
+        <div class="label" data-en="Regional Markets" data-am="ክልላዊ ገበያዎች">Regional Markets</div>
+      </div>
+      <div class="map-stage">
+        <div class="num">03</div>
+        <div class="label" data-en="Nationwide Distribution" data-am="ሀገር አቀፍ ስርጭት">Nationwide Distribution</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOMERS MARQUEE -->
+<section class="customers-section" id="customers">
+  <div class="section-inner">
+    <div class="customers-header" data-aos="fade-up">
+      <div class="eyebrow" data-en="Customers" data-am="ደንበኞች">Customers</div>
+      <h2 data-en="Trusted across the market." data-am="በገበያው ላይ የሚታመን።">Trusted across the market.</h2>
+    </div>
+    <div class="customers-marquee" data-aos="fade-up" data-aos-delay="200">
+      <div class="marquee-track">
+        <span class="marquee-item">Allmart Supermarket</span>
+        <span class="marquee-item">Discount Supermarket</span>
+        <span class="marquee-item">Lomiyad Supermarket</span>
+        <span class="marquee-item">Friendship Supermarket</span>
+        <span class="marquee-item">Addis Catering</span>
+        <span class="marquee-item">Merkato Wholesale</span>
+        <span class="marquee-item">Allmart Supermarket</span>
+        <span class="marquee-item">Discount Supermarket</span>
+        <span class="marquee-item">Lomiyad Supermarket</span>
+        <span class="marquee-item">Friendship Supermarket</span>
+        <span class="marquee-item">Addis Catering</span>
+        <span class="marquee-item">Merkato Wholesale</span>
+      </div>
+    </div>
+    <div class="customers-categories" data-aos="fade-up" data-aos-delay="400">
+      <div class="cat-item" data-en="Cooperative Unions" data-am="የትብብር ማህበራት">Cooperative Unions</div>
+      <div class="cat-item" data-en="Regional Distributors" data-am="ክልላዊ ስርጭት አስተላላፊዎች">Regional Distributors</div>
+      <div class="cat-item" data-en="Institutional Customers" data-am="ተቋማዊ ደንበኞች">Institutional Customers</div>
+    </div>
+  </div>
+</section>
+
+<!-- BEYOND THE FACTORY -->
+<section class="section section-cream" id="community">
+  <div class="section-inner">
+    <div class="community-grid">
+      <div class="community-text" data-aos="fade-right">
+        <div class="eyebrow" style="color:var(--gold-2)" data-en="Community" data-am="ማህበረሰብ">Community</div>
+        <h2 data-en="Beyond the factory." data-am="ከፋብሪካው ባሻገር።">Beyond the factory.</h2>
+        <p data-en="Ten Day Belt General Trading PLC works with governmental, nongovernmental, and religious institutions — and supports school feeding programs." data-am="ጠንድድበልት ጀነራል ትሬዲንግ ሲ.ኤል.ሲ. ከመንግስታዊ፣ ከመንግስት ያልሆኑና ከሃይማኖት ተቋማት ጋር ይሰራል — እንዲሁም የትምህርት ቤት መመገቢያ ፕሮግራሞችን ይደግፋል።">Ten Day Belt General Trading PLC works with governmental, nongovernmental, and religious institutions — and supports school feeding programs.</p>
+        <p data-en="The company's role extends beyond manufacturing into the communities it serves." data-am="የኩባንያው ሚና ከምርት ባሻገር ወደሚያገለግላቸው ማህበረሰቦች ይዘላል።">The company's role extends beyond manufacturing into the communities it serves.</p>
+      </div>
+      <div class="community-visual" data-aos="fade-left" data-aos-delay="200">
+        <img src="https://images.pexels.com/photos/6207364/pexels-photo-6207364.jpeg?auto=compress&cs=tinysrgb&w=1200" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=1920'" alt="Community and food sharing — representative image" loading="lazy">
+        <div class="community-tag">
+          <div class="label" data-en="Community · Representative image" data-am="ማህበረሰብ · ወኪል ምስል">Community · Representative image</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+>
+
+<!-- CONTACT -->
+<section class="section contact-section" id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-left" data-aos="fade-right">
+        <div class="eyebrow" style="color:var(--gold-2)" data-en="Contact" data-am="ያግኙን">Contact</div>
+        <h2 data-en="Let's talk." data-am="እንነጋገር።">Let's talk.</h2>
+        <p data-en="For partnerships, distribution inquiries, or product information — reach out directly." data-am="ለትብብር፣ ለስርጭት ጥያቄዎች ወይም ለምርት መረጃ — በቀጥታ ያግኙን።">For partnerships, distribution inquiries, or product information — reach out directly.</p>
+        <div class="contact-buttons">
+          <a href="tel:+251112736021" class="contact-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg data-en="Call Us" data-am="ደውሉ">
+            Call Us
+          </a>
+          <a href="mailto:yeabseraprima@gmail.com" class="contact-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg data-en="Email Us" data-am="ኢሜይል ላኩ">
+            Email Us
+          </a>
+          <a href="https://maps.google.com/?q=Kality+around+MIDROC+Addis+Ababa+Ethiopia" target="_blank" class="contact-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg data-en="Find Us" data-am="ይፈልጉን">
+            Find Us
+          </a>
+        </div>
+      </div>
+      <div class="contact-info" data-aos="fade-left" data-aos-delay="200">
+        <div class="contact-row">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <div class="label" data-en="Address" data-am="አድራሻ">Address</div>
+            <div class="value">Kality, around MIDROC<br>Addis Ababa, Ethiopia</div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <div>
+            <div class="label" data-en="Telephone" data-am="ስልክ">Telephone</div>
+            <div class="value"><a href="tel:+251112736021">+251 11 2736021</a></div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
+          <div>
+            <div class="label" data-en="Mobile" data-am="ተንቀሳቃሽ">Mobile</div>
+            <div class="value"><a href="tel:+251911512215">+251 911 512215</a><br><a href="tel:+251911512213">+251 911 512213</a></div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <div>
+            <div class="label" data-en="Email" data-am="ኢሜይል">Email</div>
+            <div class="value"><a href="mailto:yeabseraprima@gmail.com">yeabseraprima@gmail.com</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="name">PRIMA</div>
+        <div class="sub">Ten Day Belt General Trading PLC</div>
+        <div class="addr">Kality, around MIDROC<br>Addis Ababa, Ethiopia</div>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Navigate" data-am="አሰሳ">Navigate</h4>
+        <a href="#collection" data-en="Products" data-am="ምርቶች">Products</a>
+        <a href="#intro" data-en="Our Story" data-am="ታሪካችን">Our Story</a>
+        <a href="#quality" data-en="Quality" data-am="ጥራት">Quality</a>
+        <a href="#map" data-en="Distribution" data-am="ስርጭት">Distribution</a>
+        <a href="#contact" data-en="Contact" data-am="ያግኙን">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Contact" data-am="ያግኙን">Contact</h4>
+        <a href="tel:+251112736021">+251 11 2736021</a>
+        <a href="tel:+251911512215">+251 911 512215</a>
+        <a href="mailto:yeabseraprima@gmail.com">yeabseraprima@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="copy">© 2026 Ten Day Belt General Trading PLC. All rights reserved.</span>
+      <span class="contact-mini">PRIMA — <a href="mailto:yeabseraprima@gmail.com">yeabseraprima@gmail.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+// === AOS init ===
+AOS.init({duration:1000,once:true,offset:100,easing:'ease-out-cubic'});
+
+// === NAV scroll ===
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+// === Mobile nav ===
+const burger = document.getElementById('navBurger');
+const navLinks = document.getElementById('navLinks');
+burger.addEventListener('click', () => {
+  burger.classList.toggle('open');
+  navLinks.classList.toggle('open');
+});
+navLinks.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    burger.classList.remove('open');
+    navLinks.classList.remove('open');
+  });
+});
+
+// === Hero grain particles ===
+const particleContainer = document.getElementById('heroParticles');
+for (let i = 0; i < 40; i++) {
+  const p = document.createElement('div');
+  p.className = 'particle';
+  p.style.left = Math.random() * 100 + '%';
+  p.style.top = (50 + Math.random() * 40) + '%';
+  p.style.animationDelay = (1 + Math.random() * 2) + 's';
+  p.style.animationDuration = (3 + Math.random() * 3) + 's';
+  particleContainer.appendChild(p);
+}
+
+// === Custom cursor (desktop only) ===
+if (window.matchMedia('(min-width: 901px)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const dot = document.getElementById('cursorDot');
+  const ring = document.getElementById('cursorRing');
+  let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    dot.classList.add('visible');
+    ring.classList.add('visible');
+    dot.style.left = mouseX + 'px';
+    dot.style.top = mouseY + 'px';
+  });
+
+  document.addEventListener('mouseleave', () => {
+    dot.classList.remove('visible');
+    ring.classList.remove('visible');
+  });
+
+  function animateRing() {
+    ringX += (mouseX - ringX) * 0.15;
+    ringY += (mouseY - ringY) * 0.15;
+    ring.style.left = ringX + 'px';
+    ring.style.top = ringY + 'px';
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+
+  // Cursor interactions
+  document.querySelectorAll('a, button, .macaroni-shape, .collection-img-wrap, .contact-btn').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      if (el.classList.contains('collection-img-wrap')) {
+        ring.classList.add('view');
+      } else {
+        ring.classList.add('expand');
+      }
+    });
+    el.addEventListener('mouseleave', () => {
+      ring.classList.remove('expand', 'view');
+    });
+  });
+}
+
+// === Signature scroll story ===
+const storyStages = document.querySelectorAll('.story-stage');
+const storySection = document.querySelector('.story-section');
+function updateStory() {
+  if (!storySection) return;
+  const rect = storySection.getBoundingClientRect();
+  const winH = window.innerHeight;
+  const total = storySection.offsetHeight;
+  const progress = Math.max(0, Math.min(1, (winH / 2 - rect.top) / (total - winH * 0.3)));
+  const stageIdx = Math.min(storyStages.length - 1, Math.floor(progress * storyStages.length));
+  storyStages.forEach((s, i) => {
+    s.classList.toggle('active', i === stageIdx);
+  });
+}
+
+// === Collection horizontal scroll ===
+const collectionTrack = document.getElementById('collectionTrack');
+const collectionSection = document.querySelector('.collection-section');
+const progressDots = document.querySelectorAll('#collectionProgress .progress-dot');
+let collectionPinned = false;
+
+function updateCollection() {
+  if (!collectionTrack || !collectionSection) return;
+  if (window.innerWidth > 900) {
+    const rect = collectionSection.getBoundingClientRect();
+    const trackWidth = collectionTrack.scrollWidth;
+    const items = collectionTrack.querySelectorAll('.collection-item');
+    const itemCount = items.length;
+    const sectionHeight = collectionSection.offsetHeight;
+
+    if (rect.top <= 0 && rect.bottom > window.innerHeight) {
+      collectionPinned = true;
+      const progress = Math.max(0, Math.min(1, -rect.top / (sectionHeight - window.innerHeight)));
+      collectionTrack.style.transform = `translateX(-${progress * (itemCount - 1) * 100}vw)`;
+      const dotIdx = Math.min(itemCount - 1, Math.round(progress * (itemCount - 1)));
+      progressDots.forEach((d, i) => d.classList.toggle('active', i === dotIdx));
+    }
+  }
+}
+
+// === Counter animation ===
+const counters = document.querySelectorAll('[data-counter]');
+const counterObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const target = parseInt(el.dataset.counter);
+      const duration = 2000;
+      const start = performance.now();
+      function tick(now) {
+        const elapsed = now - start;
+        const progress = Math.min(1, elapsed / duration);
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+        let val = Math.floor(target * easeOut);
+        if (target >= 1000) {
+          val = (val).toLocaleString();
+        }
+        el.textContent = val;
+        if (progress < 1) requestAnimationFrame(tick);
+        else el.textContent = target >= 1000 ? target.toLocaleString() : target;
+      }
+      requestAnimationFrame(tick);
+      counterObs.unobserve(el);
+    }
+  });
+}, { threshold: 0.3 });
+counters.forEach(c => counterObs.observe(c));
+
+// === Quality line fill ===
+const qualitySection = document.querySelector('.quality-section');
+const qualityLineFill = document.getElementById('qualityLineFill');
+function updateQuality() {
+  if (!qualitySection || !qualityLineFill) return;
+  const rect = qualitySection.getBoundingClientRect();
+  const winH = window.innerHeight;
+  const progress = Math.max(0, Math.min(1, (winH / 2 - rect.top) / (qualitySection.offsetHeight)));
+  qualityLineFill.style.width = (progress * 100) + '%';
+}
+
+// === Geo route animation ===
+const geoSection = document.querySelector('.geo-section');
+const geoPathFill = document.getElementById('geoPathFill');
+const geoLabelManu = document.getElementById('geoLabelManu');
+const geoLabelComm = document.getElementById('geoLabelComm');
+function updateGeo() {
+  if (!geoSection || !geoPathFill) return;
+  const rect = geoSection.getBoundingClientRect();
+  const winH = window.innerHeight;
+  const progress = Math.max(0, Math.min(1, (winH / 2 - rect.top) / (geoSection.offsetHeight)));
+  geoPathFill.style.strokeDashoffset = 800 * (1 - progress);
+  if (progress > 0.4) geoLabelManu.classList.add('show');
+  if (progress > 0.7) geoLabelComm.classList.add('show');
+}
+
+// === Macaroni interactive ===
+const macaroniShapes = document.querySelectorAll('.macaroni-shape');
+const macaroniInfo = document.getElementById('macaroniInfo');
+macaroniShapes.forEach(shape => {
+  shape.addEventListener('mouseenter', () => {
+    macaroniShapes.forEach(s => s.classList.remove('active'));
+    shape.classList.add('active');
+    const name = shape.dataset.name;
+    const desc = shape.dataset.desc;
+    macaroniInfo.querySelector('.name').textContent = name;
+    macaroniInfo.querySelector('.desc').textContent = desc;
+    macaroniInfo.classList.add('visible');
+  });
+  shape.addEventListener('mouseleave', () => {
+    shape.classList.remove('active');
+    macaroniInfo.classList.remove('visible');
+  });
+  // Touch support
+  shape.addEventListener('click', () => {
+    macaroniShapes.forEach(s => s.classList.remove('active'));
+    shape.classList.add('active');
+    const name = shape.dataset.name;
+    const desc = shape.dataset.desc;
+    macaroniInfo.querySelector('.name').textContent = name;
+    macaroniInfo.querySelector('.desc').textContent = desc;
+    macaroniInfo.classList.add('visible');
+    setTimeout(() => {
+      shape.classList.remove('active');
+      macaroniInfo.classList.remove('visible');
+    }, 3000);
+  });
+});
+
+// === Scroll handler ===
+window.addEventListener('scroll', () => {
+  updateStory();
+  updateCollection();
+  updateQuality();
+  updateGeo();
+}, { passive: true });
+
+// === Hero parallax ===
+const heroBg = document.querySelector('.hero-bg img');
+if (heroBg) {
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    if (scrolled < window.innerHeight) {
+      heroBg.style.transform = `translateY(${scrolled * 0.3}px) scale(${1 + scrolled * 0.0002})`;
+    }
+  }, { passive: true });
+}
+
+// === Language toggle ===
+function toggleLang() {
+  const body = document.body;
+  const current = body.dataset.lang;
+  const newLang = current === 'en' ? 'am' : 'en';
+  body.dataset.lang = newLang;
+  document.documentElement.lang = newLang;
+  
+  // Update button text
+  const btn = document.getElementById('langBtn');
+  btn.textContent = newLang === 'en' ? 'AM' : 'EN';
+  
+  // Update all elements with data-en/data-am
+  document.querySelectorAll('[data-en][data-am]').forEach(el => {
+    const text = el.getAttribute('data-' + newLang);
+    if (text) {
+      // Check if element has child elements (like <em> or <span>)
+      if (el.children.length > 0 && el.tagName !== 'A' && el.tagName !== 'BUTTON') {
+        // For elements with children, set innerHTML
+        el.innerHTML = text;
+      } else {
+        el.textContent = text;
+      }
+    }
+  });
+  
+  // Update lang button in mobile menu
+  const mobileBtn = document.querySelector('.nav-links .lang-btn');
+  if (mobileBtn) mobileBtn.textContent = newLang === 'en' ? 'AM' : 'EN';
+}
+document.getElementById('langBtn').addEventListener('click', toggleLang);
+
+</script>
+</body>
+</html>
